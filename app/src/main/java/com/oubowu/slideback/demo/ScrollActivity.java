@@ -129,7 +129,7 @@ public class ScrollActivity extends AppCompatActivity {
 
             TextView tvPage = (TextView) view.findViewById(R.id.tv_page);
 
-            tvPage.setText("页面" + (position + 1));
+            tvPage.setText(getString(R.string.page) + (position + 1) + "");
 
             container.addView(view, ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
 

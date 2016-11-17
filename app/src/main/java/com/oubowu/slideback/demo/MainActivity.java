@@ -28,6 +28,11 @@ public class MainActivity extends AppCompatActivity {
         overridePendingTransition(R.anim.anim_slide_in, R.anim.anim_none);
     }
 
+    public void jumpFresco(View view) {
+        startActivity(new Intent(this, FrescoActivity.class));
+        overridePendingTransition(R.anim.anim_slide_in, R.anim.anim_none);
+    }
+
     @Override
     public void onBackPressed() {
         super.onBackPressed();

@@ -31,6 +31,12 @@
             android:label="@string/title_activity_scroll"
             android:theme="@style/Third"><!--android:configChanges="orientation|screenSize|keyboardHidden"-->
         </activity>
+        <activity
+            android:name=".FrescoActivity"
+            android:label="PageWithFrescoImage"
+            android:theme="@style/AppTheme.NoActionBar.Second">
+        </activity>
+
     </application>
 
 </manifest>

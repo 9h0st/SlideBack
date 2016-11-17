@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SlideBackDemo</string>
+    <string name="title_activity_second">Slide Back Page</string>
+    <string name="title_activity_scroll">Slide Back With Component Page</string>
+    <string name="second_page_button">Jump to Slide Back Page</string>
+    <string name="component_page_button">Jump to Slide Back Page With Component</string>
+    <string name="fresco_page_button">Jump To A Page With Image</string>
+
+    <string name="fresco_another_page_button">Jump To Another Page With Image</string>
+
+    <string name="slide_edge_toggle">Set Edge Slide\n(Currently Slide Full Screen)</string>
+    <string name="slide_enable_toggle">Enable Slide\n(Currently Slide is Unable)</string>
+
+    <string name="show_recylceview">show RecyclerView</string>
+    <string name="show_scrollview">show ScrollView</string>
+    <string name="show_viewpager">show ViewPager</string>
+
+    <string name="slide_full_toggle">Set Full Screen Slide\n(Currently Slide Edge)</string>
+    <string name="slide_forbid_toggle">Forbid Slide\n(Currently Slide is Enable)</string>
+
+    <string name="edge_response_percent">Percent of the Page to Response Gesture</string>
+    <string name="close_page_percent">Percent of the Page To Close</string>
+
+    <string name="Page">Page</string>
+</resources>

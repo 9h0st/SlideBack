@@ -69,7 +69,7 @@ public class SecondActivity extends AppCompatActivity {
         mSbEdgeRange.setOnSeekBarChangeListener(new OnSeekBarChangeListenerAdapter() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                mTvEdgeRange.setText("边缘响应的最大值:屏幕宽度的" + progress + "%");
+                mTvEdgeRange.setText(getString(R.string.edge_response_percent) + progress + "%");
                 if (fromUser) {
                     mSlideBackLayout.setEdgeRangePercent(progress * 1.0f / mSbEdgeRange.getMax());
                 }
@@ -79,7 +79,7 @@ public class SecondActivity extends AppCompatActivity {
         mSbSlideOutRange.setOnSeekBarChangeListener(new OnSeekBarChangeListenerAdapter() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                mTvSlideOutRange.setText("非快速滑动，关闭页面的最小值:屏幕宽度的" + progress + "%");
+                mTvSlideOutRange.setText(getString(R.string.close_page_percent) + progress + "%");
                 if (fromUser) {
                     mSlideBackLayout.setSlideOutRangePercent(progress * 1.0f / mSbSlideOutRange.getMax());
                 }
@@ -99,12 +99,14 @@ public class SecondActivity extends AppCompatActivity {
 
     public void enableEdgeSlide(View view) {
         mSlideBackLayout.edgeOnly(!mSlideBackLayout.isEdgeOnly());
-        ((Button) view).setText(mSlideBackLayout.isEdgeOnly() ? "开启全局侧滑\n(当前边缘侧滑)" : "开启边缘侧滑\n(当前全局侧滑)");
+        ((Button) view).setText(mSlideBackLayout.isEdgeOnly() ? getString(R.string.slide_full_toggle)
+                : getString(R.string.slide_edge_toggle));
     }
 
     public void disableSlide(View view) {
         mSlideBackLayout.lock(!mSlideBackLayout.isLock());
-        ((Button) view).setText(mSlideBackLayout.isLock() ? "开启侧滑\n(当前侧滑禁止)" : "禁止侧滑\n(当前侧滑开启)");
+        ((Button) view).setText(mSlideBackLayout.isLock() ? getString(R.string.slide_enable_toggle)
+                : getString(R.string.slide_forbid_toggle));
     }
 
     @Override

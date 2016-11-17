@@ -17,43 +17,34 @@
 
     <Button
         android:id="@+id/bt1"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:foreground="?attr/selectableItemBackground"
         android:onClick="enableEdgeSlide"
-        android:text="开启边缘侧滑\n(当前全局侧滑)"/>
+        android:text="@string/slide_edge_toggle"/>
 
     <Button
         android:id="@+id/bt2"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/bt1"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
         android:foreground="?attr/selectableItemBackground"
         android:onClick="disableSlide"
-        android:text="禁止侧滑\n(当前侧滑开启)"/>
+        android:text="@string/slide_forbid_toggle"/>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:onClick="jump"
-        android:text="跳转侧滑页面"/>
+
 
     <TextView
         android:id="@+id/tv_edge_range"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/bt1"
-        android:layout_alignRight="@+id/bt2"
-        android:layout_below="@+id/bt1"
+        android:layout_below="@+id/bt2"
         android:layout_marginTop="20dp"/>
 
     <SeekBar
         android:id="@+id/sb_edge_range"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/bt1"
-        android:layout_alignRight="@+id/bt2"
         android:layout_below="@+id/tv_edge_range"
         android:layout_marginTop="20dp"
         android:max="100"
@@ -63,20 +54,25 @@
         android:id="@+id/tv_slide_out_range"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/bt1"
-        android:layout_alignRight="@+id/bt2"
         android:layout_below="@+id/sb_edge_range"
         android:layout_marginTop="20dp"/>
 
     <SeekBar
         android:id="@+id/sb_slide_out_range"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/bt1"
-        android:layout_alignRight="@+id/bt2"
         android:layout_below="@+id/tv_slide_out_range"
         android:layout_marginTop="20dp"
         android:max="100"
         android:progress="0"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/sb_slide_out_range"
+        android:onClick="jump"
+        android:layout_marginTop="20dp"
+        android:text="@string/second_page_button"/>
 
 </RelativeLayout>

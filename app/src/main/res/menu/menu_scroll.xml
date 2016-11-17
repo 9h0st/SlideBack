@@ -7,17 +7,17 @@
             android:id="@+id/action_rv"
             android:checked="true"
             android:orderInCategory="100"
-            android:title="显示RecyclerView"
+            android:title="@string/show_recylceview"
             app:showAsAction="never"/>
         <item
             android:id="@+id/action_nsv"
             android:orderInCategory="100"
-            android:title="显示ScrollView"
+            android:title="@string/show_scrollview"
             app:showAsAction="never"/>
         <item
             android:id="@+id/action_vp"
             android:orderInCategory="100"
-            android:title="显示ViewPager"
+            android:title="@string/show_viewpager"
             app:showAsAction="never"/>
     </group>
 </menu>
