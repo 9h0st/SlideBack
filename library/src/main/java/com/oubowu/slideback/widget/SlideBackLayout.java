@@ -124,6 +124,15 @@ public class SlideBackLayout extends FrameLayout {
 
         mContentView.setFitsSystemWindows(false);
 
+        if (mRotateScreen) {
+            mContentView.findViewById(android.R.id.content).setOnClickListener(new OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    // 屏蔽上个内容页的点击事件
+                }
+            });
+        }
+
     }
 
     @Override
@@ -204,7 +213,7 @@ public class SlideBackLayout extends FrameLayout {
         if (mRotateScreen) {
             mCloseFlagForDetached = true;
             mCloseFlagForWindowFocus = false;
-            mOnInternalStateListener.onClose(false);
+            mOnInternalStateListener.onClose(null);
             mPreContentView.setX(0);
         }
     }
